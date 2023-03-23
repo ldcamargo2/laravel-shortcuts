@@ -1,0 +1,47 @@
+{
+  "name": "ldcamargo2/laravel-shortcuts",
+  "description": "",
+  "homepage": "https://github.com/ldcamargo2/laravel-shortcuts",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Luan de Camargo",
+      "email": "luan.camargo@outlook.com",
+      "homepage": "https://github.com/ldcamargo2",
+      "role": "Sr. FullStack Developer."
+    }
+  ],
+  "require": {
+    "php": ">=7.4 || ^8.0 || ^8.1",
+    "fideloper/proxy": "^4.0",
+    "laravel/framework": "^8.52",
+    "laravel/tinker": "^2.0",
+    "elgibor-solution/laravel-database-encryption": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "LaravelShortcuts\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LaravelShortcuts\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php ./vendor/bin/testbench package:discover --ansi"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaravelShortcuts\\LaravelShortcutsServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.19",
+    "phpunit/phpunit": "^9.5"
+  }
+}
